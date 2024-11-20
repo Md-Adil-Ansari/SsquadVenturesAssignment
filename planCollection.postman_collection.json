@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "f806b6ad-87c2-4dfb-a5f6-b1a02444e473",
+		"name": "planCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39395679"
+	},
+	"item": [
+		{
+			"name": "plans/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2RkYzAyZGE5ZDE4NmY3YjcyOTNhMSIsInVzZXJuYW1lIjoiYWQiLCJpYXQiOjE3MzIxMDc4MTksImV4cCI6MTczMjE5NDIxOX0.ZgS6b6ZVY9_NU4sxzyyq87rup9SHf41Fa2rb_6IkaTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"category\": \"business\",\r\n   \"subcategory\":\"conference\",\r\n    \"location\": { \"lat\": 41.9028, \"lng\": 12.4964 },\r\n    \"date\": \"2024-12-05\",\r\n    \"time\": \"11:00 AM\",\r\n    \"people\": [\"673d91890bf28a9920f4b3c2\"] \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/plans/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plans/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2RkYzAyZGE5ZDE4NmY3YjcyOTNhMSIsInVzZXJuYW1lIjoiYWQiLCJpYXQiOjE3MzIxMDc4MTksImV4cCI6MTczMjE5NDIxOX0.ZgS6b6ZVY9_NU4sxzyyq87rup9SHf41Fa2rb_6IkaTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plans/getAllPlansOfAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2RkYzAyZGE5ZDE4NmY3YjcyOTNhMSIsInVzZXJuYW1lIjoiYWQiLCJpYXQiOjE3MzIxMDc4MTksImV4cCI6MTczMjE5NDIxOX0.ZgS6b6ZVY9_NU4sxzyyq87rup9SHf41Fa2rb_6IkaTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/plans/getAllPlansOfAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans",
+						"getAllPlansOfAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plans/filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3M2RkYzAyZGE5ZDE4NmY3YjcyOTNhMSIsInVzZXJuYW1lIjoiYWQiLCJpYXQiOjE3MzIxMDc4MTksImV4cCI6MTczMjE5NDIxOX0.ZgS6b6ZVY9_NU4sxzyyq87rup9SHf41Fa2rb_6IkaTg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/plans/filter?people=friends&people=friendsOfFriends&category=shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "subcategory",
+							"value": "conference",
+							"disabled": true
+						},
+						{
+							"key": "location",
+							"value": "{ \"lat\": 40.7128, \"lng\": -74.0060 }",
+							"disabled": true
+						},
+						{
+							"key": "distance",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "timelineStatus",
+							"value": "active",
+							"disabled": true
+						},
+						{
+							"key": "timelineStatus",
+							"value": "upcoming",
+							"disabled": true
+						},
+						{
+							"key": "withinValue",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "withinUnit",
+							"value": "days",
+							"disabled": true
+						},
+						{
+							"key": "afterValue",
+							"value": "30",
+							"disabled": true
+						},
+						{
+							"key": "afterUnit",
+							"value": "days",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "8",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "people",
+							"value": "friends"
+						},
+						{
+							"key": "people",
+							"value": "friendsOfFriends"
+						},
+						{
+							"key": "people",
+							"value": "global",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "shop"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plans/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/plans/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createMany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"plans\": [\r\n    {\r\n      \"creatorName\": \"a\",\r\n      \"category\": \"business\",\r\n      \"subcategory\": \"conference\",\r\n      \"location\": { \"lat\": 40.7128, \"lng\": -74.0060 },\r\n      \"date\": \"2024-12-15\",\r\n      \"time\": \"10:00 AM\",\r\n      \"people\": [\"673d910b0bf28a9920f4b39e\", \"673d91120bf28a9920f4b3a1\"],\r\n      \"createdBy\": \"673d91000bf28a9920f4b39b\",\r\n      \"peopleNames\": [\"b\", \"c\"]\r\n    },\r\n    {\r\n      \"creatorName\": \"b\",\r\n      \"category\": \"travel\",\r\n      \"subcategory\": \"adventure\",\r\n      \"location\": { \"lat\": 34.0522, \"lng\": -118.2437 },\r\n      \"date\": \"2024-11-20\",\r\n      \"time\": \"2:00 PM\",\r\n      \"people\": [],\r\n      \"createdBy\": \"673d91000bf28a9920f4b39b\",\r\n      \"peopleNames\": []\r\n    }\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/plans/createMany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"plans",
+						"createMany"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
