@@ -1072,4 +1072,3 @@ Common utilities, middleware, and configurations are stored in the `shared/` dir
 For any questions or support, please contact [adil9304784417@gmail.com](mailto:adil9304784417@gmail.com).
 
 ---
-```
