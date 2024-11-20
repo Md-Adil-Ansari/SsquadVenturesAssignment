@@ -180,6 +180,7 @@ USER_SERVICE_URL=http://localhost:3001/api/users
 ---
 
 ## Running-Services
+### Open two terminal for running these two services
 
 ### running user-service
 
