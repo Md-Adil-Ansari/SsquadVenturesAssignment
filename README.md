@@ -1,5 +1,6 @@
 
 Welcome to the Project! This documentation will guide you through cloning, setting up, running, and testing the two primary services included in this project: **User Service** and **Plan Service**.
+The repository contains Postman collections for two services.
 
 # Table of Contents
 
